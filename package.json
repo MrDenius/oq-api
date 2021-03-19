@@ -4,7 +4,9 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"dev": "node src/app.js -debug"
+		"dev": "node src/app.js -debug",
+		"push": "git push heroku master",
+		"logs": "heroku logs -a oq-api"
 	},
 	"keywords": [],
 	"author": "",
