@@ -8,6 +8,12 @@ let pass = (canvas.height + 1) / 10;
 
 const Main = () => {
 	DrawSharp();
+
+	ctx.font = `${pass}px serif`;
+	ctx.textAlign = "center";
+	ctx.textBaseline = "middle"
+
+	ctx.fillText("A",pass/2,pass/2)
 };
 
 const DrawSharp = () => {
