@@ -1,5 +1,11 @@
+const dotenv = require("dotenv");
+dotenv.config({ path: __dirname + "/.env" });
+
 const express = require("express");
 const app = express();
+
+app.use(express.json({ extended: true }));
+//app.use(express.urlencoded({ extended: true }));
 
 const cli = require("cli");
 
