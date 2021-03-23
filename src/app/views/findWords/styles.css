@@ -4,11 +4,10 @@ body {
 }
 
 #field {
-	background-color: #bbb;
+	background-color: #fff;
 	display: block;
 	margin: auto;
-	margin-top: 20px;
-	border: 3px solid #000;
+	/*border: 3px solid #000;*/
 }
 
 #loginForm {

@@ -1,8 +1,8 @@
 const canvas = document.querySelector("#field");
 const ctx = canvas.getContext("2d");
 
-canvas.height = document.body.clientHeight * 0.9;
-canvas.width = document.body.clientHeight * 0.9;
+canvas.height = document.body.clientHeight;
+canvas.width = document.body.clientHeight
 
 let MAX_LETTERS = 9;
 let pass = (canvas.height + 1) / (MAX_LETTERS + 1);
