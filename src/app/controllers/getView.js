@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 module.exports = (view) => {
-	const viewPath = path.join(__dirname, `..\\views\\${view}\\`);
+	const viewPath = path.join(__dirname, `../views/${view}/`);
 	const viewFilePath = (filename) => path.join(viewPath, filename);
 
 	console.log("View path: ", viewPath);
