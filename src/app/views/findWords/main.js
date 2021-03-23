@@ -2,7 +2,7 @@ const canvas = document.querySelector("#field");
 const ctx = canvas.getContext("2d");
 
 canvas.height = document.body.clientHeight;
-canvas.width = document.body.clientHeight
+canvas.width = document.body.clientHeight;
 
 let MAX_LETTERS = 9;
 let pass = (canvas.height + 1) / (MAX_LETTERS + 1);
@@ -11,7 +11,21 @@ const searchParams = new URLSearchParams(location.search);
 
 let USER = {};
 
-let WORDS = ["слово", "найди", "игра"];
+// let WORDS = ["слово", "найди", "игра"];
+
+let WORDS = [
+	"byte",
+	"shorint",
+	"integer",
+	"word",
+	"longint",
+	"real",
+	"single",
+	"double",
+	"extended",
+	"comp",
+];
+
 // const WORDS = [
 // 	"слово",
 // 	"найди",
@@ -100,7 +114,8 @@ const StartLogin = (callback) => {
 };
 
 const GenerateRandomLetters = (words) => {
-	const letters = "йцукенгшщзхъфывапролджэячсмитьбюё".split("");
+	// const letters = "йцукенгшщзхъфывапролджэячсмитьбюё".split("");
+	const letters = "qwertyuiopasdfghjklzxcvbnm".split("");
 	const ltrs = { letters: [], words: [] };
 
 	const RandLetter = () => {
@@ -149,6 +164,7 @@ const WordFoundHandler = (wm) => {
 			body: JSON.stringify(USER),
 			headers: { "Content-Type": "application/json" },
 		});
+		alert("Вы успешно прошли задание!");
 	}
 };
 
