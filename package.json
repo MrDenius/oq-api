@@ -4,9 +4,11 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
+		"start": "node src/app.js",
 		"dev": "node src/app.js -debug",
-		"push": "git push heroku master",
-		"logs": "heroku logs -a oq-api -t"
+		"logs": "heroku logs ---app=oq-api -t",
+		"on": "heroku ps:scale web=1 --app=oq-api",
+		"off": "heroku ps:scale web=0 --app=oq-api"
 	},
 	"keywords": [],
 	"author": "",
