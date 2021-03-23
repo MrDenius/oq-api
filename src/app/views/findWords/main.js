@@ -7,9 +7,11 @@ canvas.width = document.body.clientHeight * 0.9;
 let MAX_LETTERS = 9;
 let pass = (canvas.height + 1) / (MAX_LETTERS + 1);
 
+const searchParams = new URLSearchParams(location.search);
+
 let USER = {};
 
-const WORDS = ["слово", "найди", "игра"];
+let WORDS = ["слово", "найди", "игра"];
 // const WORDS = [
 // 	"слово",
 // 	"найди",
@@ -22,6 +24,10 @@ const WORDS = ["слово", "найди", "игра"];
 // 	"целое",
 // 	"число", //10
 // ];
+
+if (searchParams.get("words")) {
+	WORDS = searchParams.get("words").split(";");
+}
 
 const NewPass = (cells) => {
 	MAX_LETTERS = cells - 1;
