@@ -4,6 +4,8 @@ module.exports = (view) => {
 	const viewPath = path.join(__dirname, `..\\views\\${view}\\`);
 	const viewFilePath = (filename) => path.join(viewPath, filename);
 
+	console.log("View path: ", viewPath);
+
 	let doc = {};
 
 	if (fs.existsSync(viewFilePath("head.html")))
