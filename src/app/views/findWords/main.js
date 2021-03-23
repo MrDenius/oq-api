@@ -238,9 +238,11 @@ const InsertWords = (words, ls) => {
 			lettersPos.forEach((letterPos) => {
 				ls.cells[letterPos.x][letterPos.y].word = true;
 				ls.cells[letterPos.x][letterPos.y].letter = letterPos.letter;
-				ls.cells[letterPos.x][letterPos.y].fontColor = randColor;
-				colors[colorI] || "#fff";
-				ls.cells[letterPos.x][letterPos.y].color = "#aaa";
+				if (searchParams.get("debug")) {
+					ls.cells[letterPos.x][letterPos.y].fontColor = randColor;
+					colors[colorI] || "#fff";
+					ls.cells[letterPos.x][letterPos.y].color = "#aaa";
+				}
 			});
 			console.log(lettersPos);
 
